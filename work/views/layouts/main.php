@@ -5,12 +5,13 @@
 use common\assets\CommondAsset;
 use common\assets\CommonVendor;
 use yii\helpers\Html;
-
+use yii\web\View;
 CommondAsset::register($this);
+CommonVendor::registerPoint($this, View::POS_HEAD);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
+<html lang="<?= Yii::$app->language ?>" ng-app="calendarDemoApp">
     <head>
         <meta charset="<?= Yii::$app->charset ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,22 +21,6 @@ CommondAsset::register($this);
         <?= Html::csrfMetaTags() ?>
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
-		
- 		<script src="/common/web/js/jquery.js"></script>
-        <script src="/common/web/js/angular.js"></script>
-        <script src="/common/web/js/ui-bootstrap-tpls-0.9.0.js"></script>
-        <script src="/common/web/js/moment.js"></script>
-        <script src="/common/web/js/fullcalendar.js"></script>
-        <script src="/common/web/js/gcal.js"></script>
-        <script src="/common/web/js/angular-locale_vi-vn.js"></script>
-        <script src="/common/web/js/calendar.js"></script>
-        <script src="/common/web/js/calendarDemo.js"></script>
-        
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
     <body class="hold-transition skin-blue-light sidebar-mini">

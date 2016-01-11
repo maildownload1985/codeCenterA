@@ -30,8 +30,6 @@ class CommondAsset extends AssetBundle
         'plugins/fastclick/fastclick.js',
         'js/app.min.js',
         'plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js',
-    		
-    		
     ];
     
     public $depends = [

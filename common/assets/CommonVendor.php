@@ -16,17 +16,19 @@ class CommonVendor extends AssetBundle
     ];
     
     public $js = [
-    		'works/calendar/js/jquery.js',
-    		'works/calendar/js/angular.js',
-    		'works/calendar/js/ui-bootstrap-tpls-0.9.0.js',
-    		'works/calendar/js/moment.js',
-    		'works/calendar/js/fullcalendar.js',
-    		'works/calendar/js/gcal.js',
-    		'works/calendar/js/angular-locale_vi-vn.js',
-    		'works/calendar/js/calendar.js',
+    		'/vendor/bower/works/calendar/js/jquery.js',
+    		'/vendor/bower/works/calendar/js/angular.js',
+    		'/vendor/bower/works/calendar/js/ui-bootstrap-tpls-0.9.0.js',
+    		'/vendor/bower/works/calendar/js/moment.js',
+    		'/vendor/bower/works/calendar/js/fullcalendar.js',
+    		'/vendor/bower/works/calendar/js/gcal.js',
+    		'/vendor/bower/works/calendar/js/angular-locale_vi-vn.js',
+    		'/vendor/bower/works/calendar/js/calendar.js',
+    		'/vendor/bower/works/calendar/js/calendarDemo.js',
     ];
     
     public $depends = [
+    		'yii\web\YiiAsset',
     ];
     
     public function __construct($config = array()) {

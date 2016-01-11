@@ -6,7 +6,7 @@
 namespace work\modules\calendar\controllers;
 
 use Yii;
-use common\models\work\event;
+use common\models\calendar\event;
 use work\modules\calendar\models\eventSearch;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -63,7 +63,7 @@ class EventController extends CeController
      */
     public function actionCreate()
     {
-        $model = new event();
+        $model = new eventSearch();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
