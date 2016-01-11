@@ -3,9 +3,8 @@
 /* @var $content string */
 
 use common\assets\CommondAsset;
+use common\assets\CommonVendor;
 use yii\helpers\Html;
-use yii\widgets\Breadcrumbs;
-use common\widgets\Alert;
 
 CommondAsset::register($this);
 ?>
@@ -21,10 +20,17 @@ CommondAsset::register($this);
         <?= Html::csrfMetaTags() ?>
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
-        <script src="/common/web/js/jquery.min.js"></script>
-        <script src="/common/web/js/moment.min.js"></script>
-        <script src="/common/web/js/fullcalendar.min.js"></script>
-
+		
+ 		<script src="/common/web/js/jquery.js"></script>
+        <script src="/common/web/js/angular.js"></script>
+        <script src="/common/web/js/ui-bootstrap-tpls-0.9.0.js"></script>
+        <script src="/common/web/js/moment.js"></script>
+        <script src="/common/web/js/fullcalendar.js"></script>
+        <script src="/common/web/js/gcal.js"></script>
+        <script src="/common/web/js/angular-locale_vi-vn.js"></script>
+        <script src="/common/web/js/calendar.js"></script>
+        <script src="/common/web/js/calendarDemo.js"></script>
+        
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
